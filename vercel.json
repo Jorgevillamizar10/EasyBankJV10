@@ -1,0 +1,36 @@
+{
+  "version": 2,
+  "name": "easybank-master10",
+  "builds": [
+    {
+      "use": "@vercel/static-build",
+      "src": "package.json"
+    }
+  ],
+  "routes": [
+    {
+      "src": "(.*).js",
+      "dest": "/$1.js"
+    },
+    {
+      "src": "(.*).json",
+      "dest": "/$1.json"
+    },
+    {
+      "src": "(.*).png",
+      "dest": "/$1.png"
+    },
+    {
+      "src": "(.*).svg",
+      "dest": "/$1.svg"
+    },
+    {
+      "src": "(.*).jpg",
+      "dest": "/$1.jpg"
+    },
+    {
+      "src": "/.*",
+      "dest": "/index.html"
+    }
+  ]
+}
